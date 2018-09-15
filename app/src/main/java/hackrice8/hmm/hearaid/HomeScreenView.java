@@ -1,5 +1,6 @@
 package hackrice8.hmm.hearaid;
-
+import java.util.ArrayList;
+import java.util.List;
 import android.media.AudioTrack;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
@@ -36,14 +37,16 @@ public class HomeScreenView extends AppCompatActivity {
         //Buttons creation
         final Button btn00 = (Button) findViewById(R.id.btn00);
         final Button btn01 = (Button) findViewById(R.id.btn01);
-
+        final Button[] firstColumnButtons = new Button[] {btn00, btn01};
+        //firstColumnButtons = new Button[] {btn00, btn01};
 
         //Color
         final int onColor = R.color.cardview_dark_background;
         final int offColor = R.color.colorAccent;
 
         //Modify color on click
-        for (Button btn : firstColumnButtons) {
+        for (Button btn1 : firstColumnButtons) {
+            final Button btn = btn1;
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
