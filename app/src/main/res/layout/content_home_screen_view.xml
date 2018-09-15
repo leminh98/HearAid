@@ -48,6 +48,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="btnOnClick"
                     android:text="Button" />
 
             </LinearLayout>
