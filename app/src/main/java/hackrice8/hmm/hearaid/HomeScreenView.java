@@ -10,6 +10,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class HomeScreenView extends AppCompatActivity {
+//
+//    public void button (View v) {
+//
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
