@@ -8,13 +8,439 @@
     tools:context="hackrice8.hmm.hearaid.HomeScreenView"
     tools:showIn="@layout/activity_home_screen_view">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:scrollbarStyle="insideInset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridLayout
+            android:id="@+id/mainGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="8"
+            android:alignmentMode="alignMargins"
+            android:columnCount="6"
+            android:columnOrderPreserved="false"
+            android:padding="14dp"
+            android:rowCount="18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Row 1 -->
+
+            <!-- Column 1 -->
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/button8"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:elevation="0dp"
+                            android:text="A" />
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button8"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="0dp"
+                        android:text="A" />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button8"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="0dp"
+                        android:text="A" />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button8"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="0dp"
+                        android:text="A" />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button8"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="0dp"
+                        android:text="A" />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button8"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="0dp"
+                        android:text="A" />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+
+            <!-- Row 2 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+
+            <!-- Row 3 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+            <!-- Row 4 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+            <!-- Row 5 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+            <!-- Row 6 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+            <!-- Row 7 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+            <!-- Row 8 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+            <!-- Row 9 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+            <!-- Row 10 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+
+            <!-- Row 11 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+            <!-- Row 12 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+            <!-- Row 13 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+
+            <!-- Row 14 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+
+            <!-- Row 15 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+
+            <!-- Row 16 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+
+            <!-- Row 17 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+
+            <!-- Row 18 -->
+
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+
+            <!--Column 3-->
+
+            <!--Column 4-->
+
+            <!--Column 5-->
+
+            <!--Column 6-->
+
+
+        </GridLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
