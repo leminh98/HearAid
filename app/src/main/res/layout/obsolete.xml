@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="hackrice8.hmm.hearaid.HomeScreenView"
-    tools:showIn="@layout/activity_home_screen_view">
+    tools:context="hackrice8.hmm.hearaid.usefulobsoletecode"
+    tools:showIn="@layout/obsolete">
 
     <GridLayout
         android:id="@+id/mainGrid"
