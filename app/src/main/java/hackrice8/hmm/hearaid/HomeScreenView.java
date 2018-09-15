@@ -22,23 +22,7 @@ public class HomeScreenView extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final Button btn00 = (Button) findViewById(R.id.btn00);
-        btn00.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MediaPlayer mp = MediaPlayer.create(btn00.getContext(), R.raw.hearingtestcalibrated);
-                mp.start();
-            }
-        });
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        buttonUI();
     }
 
     @Override
@@ -48,6 +32,58 @@ public class HomeScreenView extends AppCompatActivity {
         return true;
     }
 
+    protected void buttonUI (){
+        //Buttons creation
+        final Button btn00 = (Button) findViewById(R.id.btn00);
+        final Button btn01 = (Button) findViewById(R.id.btn01);
+
+
+        //Color
+        final int onColor = R.color.cardview_dark_background;
+        final int offColor = R.color.colorAccent;
+
+        //Modify color on click
+        for (Button btn : firstColumnButtons) {
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btn.setBackgroundColor(getResources().getColor(onColor));
+                    for (Button other : firstColumnButtons) {
+                        if (other != btn) {
+                            other.setBackgroundColor(getResources().getColor(offColor));
+                        }
+                    }
+
+                    MediaPlayer mp = MediaPlayer.create(btn00.getContext(), R.raw.hearingtestcalibrated);
+                    mp.start();
+                }
+            });
+        }
+
+        /*
+        btn00.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btn00.setBackgroundColor(getResources().getColor(onColor));
+                btn01.setBackgroundColor(getResources().getColor(offColor));
+
+                MediaPlayer mp = MediaPlayer.create(btn00.getContext(), R.raw.hearingtestcalibrated);
+                mp.start();
+            }
+        });
+
+        btn01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btn00.setBackgroundColor(getResources().getColor(offColor));
+                btn01.setBackgroundColor(getResources().getColor(onColor));
+
+                MediaPlayer mp = MediaPlayer.create(btn01.getContext(), R.raw.hearingtestd8);
+                mp.start();
+            }
+        });
+        */
+    }
 //    public void btnOnClick(View v) {
 //
 ////        Button btn = (Button) findViewById(R.id.btn01);
