@@ -20,7 +20,7 @@ public class FourthQuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fourth_question);
 
         //Buttons
-        final Model model = new Model();
+        final btnMapping btnMapping = new btnMapping();
         final Button btnSubmit = (Button) findViewById(R.id.btnTo5);
         final Button btnd1 = (Button) findViewById(R.id.btnd1);
         final Button btnd2 = (Button) findViewById(R.id.btnd2);
@@ -35,7 +35,7 @@ public class FourthQuestionActivity extends AppCompatActivity {
         final Button btnd11 = (Button) findViewById(R.id.btnd11);
         final Button btnd12 = (Button) findViewById(R.id.btnd12);
 
-        Map<Button, Integer> buttonsD = new HashMap<Button, Integer>(){{
+       final Map<Button, Integer> buttonsD = new HashMap<Button, Integer>(){{
             put(btnd1, R.raw.hearingtestd1);
             put(btnd2, R.raw.hearingtestd2);
             put(btnd3, R.raw.hearingtestd3);
@@ -52,44 +52,46 @@ public class FourthQuestionActivity extends AppCompatActivity {
         }};
 
         //Noise onclick
-        String res = model.buttonUI(this, buttonsD);
-        if(res.equals("1")) {
-            point1 = new DataPoint(3, -5);
-        } else if (res.equals("2")) {
-            point1 = new DataPoint(3, 0);
-        } else if (res.equals("3")) {
-            point1 = new  DataPoint(3, 5);
-        } else if (res.equals("4")) {
-            point1 = new  DataPoint(3, 10);
-        } else if (res.equals("5")) {
-            point1 = new  DataPoint(3, 15);
-        } else if (res.equals("6")) {
-            point1 = new  DataPoint(3, 20);
-        } else if (res.equals("7")) {
-            point1 = new  DataPoint(3, 30);
-        } else if (res.equals("8")) {
-            point1 = new  DataPoint(3, 40);
-        } else if (res.equals("9")) {
-            point1 = new  DataPoint(3, 50);
-        } else if (res.equals("10")) {
-            point1 = new  DataPoint(3, 60);
-        } else if (res.equals("11")) {
-            point1 = new  DataPoint(3, 70);
-        } else {
-            point1 = new  DataPoint(3, 80);
-        }
+        btnMapping.buttonUI(this, buttonsD);
 
         //Submit button
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openFifthQuestionActivity();
+                String res = btnMapping.findActiveButton(FourthQuestionActivity.super.getApplicationContext(),buttonsD);
+                if(res.equals("1")) {
+                    point1 = new DataPoint(3, -5);
+                } else if (res.equals("2")) {
+                    point1 = new DataPoint(3, 0);
+                } else if (res.equals("3")) {
+                    point1 = new  DataPoint(3, 5);
+                } else if (res.equals("4")) {
+                    point1 = new  DataPoint(3, 10);
+                } else if (res.equals("5")) {
+                    point1 = new  DataPoint(3, 15);
+                } else if (res.equals("6")) {
+                    point1 = new  DataPoint(3, 20);
+                } else if (res.equals("7")) {
+                    point1 = new  DataPoint(3, 30);
+                } else if (res.equals("8")) {
+                    point1 = new  DataPoint(3, 40);
+                } else if (res.equals("9")) {
+                    point1 = new  DataPoint(3, 50);
+                } else if (res.equals("10")) {
+                    point1 = new  DataPoint(3, 60);
+                } else if (res.equals("11")) {
+                    point1 = new  DataPoint(3, 70);
+                } else {
+                    point1 = new  DataPoint(3, 80);
+                }
+
+                openFifthQuestionActivity(point1);
             }
         });
     }
 
-    public void openFifthQuestionActivity() {
-        Model.points[3] = point1;
+    public void openFifthQuestionActivity(DataPoint point1) {
+        HearModel.points[3] = point1;
         Intent fourthQuestionIntent = new Intent(this, FifthQuestionActivity.class);
         startActivity(fourthQuestionIntent);
 

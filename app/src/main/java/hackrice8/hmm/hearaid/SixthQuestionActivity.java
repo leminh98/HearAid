@@ -11,8 +11,6 @@ import com.jjoe64.graphview.series.DataPoint;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.xml.transform.Result;
-
 public class SixthQuestionActivity extends AppCompatActivity {
 
     protected static DataPoint point1 = new DataPoint(5, -5);
@@ -22,7 +20,7 @@ public class SixthQuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sixth_question);
 
         //Buttons
-        final Model model = new Model();
+        final btnMapping btnMapping = new btnMapping();
         final Button btnSubmit = (Button) findViewById(R.id.btnEnd);
         final Button btnf1 = (Button) findViewById(R.id.btnf1);
         final Button btnf2 = (Button) findViewById(R.id.btnf2);
@@ -37,7 +35,7 @@ public class SixthQuestionActivity extends AppCompatActivity {
         final Button btnf11 = (Button) findViewById(R.id.btnf11);
         final Button btnf12 = (Button) findViewById(R.id.btnf12);
 
-        Map<Button, Integer> buttonsF = new HashMap<Button, Integer>(){{
+        final Map<Button, Integer> buttonsF = new HashMap<Button, Integer>(){{
             put(btnf1, R.raw.hearingtestg1);
             put(btnf2, R.raw.hearingtestg2);
             put(btnf3, R.raw.hearingtestg3);
@@ -53,44 +51,46 @@ public class SixthQuestionActivity extends AppCompatActivity {
 
         }};
         //Noise onclick
-        String res = model.buttonUI(this, buttonsF);
-        if(res.equals("1")) {
-            point1 = new DataPoint(5, -5);
-        } else if (res.equals("2")) {
-            point1 = new DataPoint(5, 0);
-        } else if (res.equals("3")) {
-            point1 = new  DataPoint(5, 5);
-        } else if (res.equals("4")) {
-            point1 = new  DataPoint(5, 10);
-        } else if (res.equals("5")) {
-            point1 = new  DataPoint(5, 15);
-        } else if (res.equals("6")) {
-            point1 = new  DataPoint(5, 20);
-        } else if (res.equals("7")) {
-            point1 = new  DataPoint(5, 30);
-        } else if (res.equals("8")) {
-            point1 = new  DataPoint(5, 40);
-        } else if (res.equals("9")) {
-            point1 = new  DataPoint(5, 50);
-        } else if (res.equals("10")) {
-            point1 = new  DataPoint(5, 60);
-        } else if (res.equals("11")) {
-            point1 = new  DataPoint(5, 70);
-        } else {
-            point1 = new  DataPoint(5, 80);
-        }
+        btnMapping.buttonUI(this, buttonsF);
 
         //Submit button
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openResultQuestionActivity();
+                String res = btnMapping.findActiveButton(SixthQuestionActivity.super.getApplicationContext(),buttonsF);
+                if(res.equals("1")) {
+                    point1 = new DataPoint(5, -5);
+                } else if (res.equals("2")) {
+                    point1 = new DataPoint(5, 0);
+                } else if (res.equals("3")) {
+                    point1 = new  DataPoint(5, 5);
+                } else if (res.equals("4")) {
+                    point1 = new  DataPoint(5, 10);
+                } else if (res.equals("5")) {
+                    point1 = new  DataPoint(5, 15);
+                } else if (res.equals("6")) {
+                    point1 = new  DataPoint(5, 20);
+                } else if (res.equals("7")) {
+                    point1 = new  DataPoint(5, 30);
+                } else if (res.equals("8")) {
+                    point1 = new  DataPoint(5, 40);
+                } else if (res.equals("9")) {
+                    point1 = new  DataPoint(5, 50);
+                } else if (res.equals("10")) {
+                    point1 = new  DataPoint(5, 60);
+                } else if (res.equals("11")) {
+                    point1 = new  DataPoint(5, 70);
+                } else {
+                    point1 = new  DataPoint(5, 80);
+                }
+
+                openResultQuestionActivity(point1);
             }
         });
 
     }
-    public void openResultQuestionActivity() {
-        Model.points[5] = point1;
+    public void openResultQuestionActivity(DataPoint point1) {
+        HearModel.points[5] = point1;
         Intent sixthQuestionIntent = new Intent(this, ResultActivity.class);
         startActivity(sixthQuestionIntent);
 

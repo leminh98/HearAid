@@ -19,7 +19,7 @@ public class ThirdQuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third_question);
         //Buttons
-        final Model model = new Model();
+        final btnMapping btnMapping = new btnMapping();
         final Button btnSubmit = (Button) findViewById(R.id.btnTo4);
         final Button btnc1 = (Button) findViewById(R.id.btnc1);
         final Button btnc2 = (Button) findViewById(R.id.btnc2);
@@ -34,7 +34,7 @@ public class ThirdQuestionActivity extends AppCompatActivity {
         final Button btnc11 = (Button) findViewById(R.id.btnc11);
         final Button btnc12 = (Button) findViewById(R.id.btnc12);
 
-        Map<Button, Integer> buttonsC = new HashMap<Button, Integer>(){{
+        final Map<Button, Integer> buttonsC = new HashMap<Button, Integer>(){{
             put(btnc1, R.raw.hearingtestc1);
             put(btnc2, R.raw.hearingtestc2);
             put(btnc3, R.raw.hearingtestc3);
@@ -51,44 +51,46 @@ public class ThirdQuestionActivity extends AppCompatActivity {
         }};
 
         //Noise onclick
-        String res = model.buttonUI(this, buttonsC);
-        if(res.equals("1")) {
-            point1 = new DataPoint(2, -5);
-        } else if (res.equals("2")) {
-            point1 = new DataPoint(2, 0);
-        } else if (res.equals("3")) {
-            point1 = new  DataPoint(2, 5);
-        } else if (res.equals("4")) {
-            point1 = new  DataPoint(2, 10);
-        } else if (res.equals("5")) {
-            point1 = new  DataPoint(2, 15);
-        } else if (res.equals("6")) {
-            point1 = new  DataPoint(2, 20);
-        } else if (res.equals("7")) {
-            point1 = new  DataPoint(2, 30);
-        } else if (res.equals("8")) {
-            point1 = new  DataPoint(2, 40);
-        } else if (res.equals("9")) {
-            point1 = new  DataPoint(2, 50);
-        } else if (res.equals("10")) {
-            point1 = new  DataPoint(2, 60);
-        } else if (res.equals("11")) {
-            point1 = new  DataPoint(2, 70);
-        } else {
-            point1 = new  DataPoint(2, 80);
-        }
+        btnMapping.buttonUI(this, buttonsC);
+
 
         //Submit button
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openFourthQuestionActivity();
+                String res = btnMapping.findActiveButton(ThirdQuestionActivity.super.getApplicationContext(), buttonsC);
+                if(res.equals("1")) {
+                    point1 = new DataPoint(2, -5);
+                } else if (res.equals("2")) {
+                    point1 = new DataPoint(2, 0);
+                } else if (res.equals("3")) {
+                    point1 = new  DataPoint(2, 5);
+                } else if (res.equals("4")) {
+                    point1 = new  DataPoint(2, 10);
+                } else if (res.equals("5")) {
+                    point1 = new  DataPoint(2, 15);
+                } else if (res.equals("6")) {
+                    point1 = new  DataPoint(2, 20);
+                } else if (res.equals("7")) {
+                    point1 = new  DataPoint(2, 30);
+                } else if (res.equals("8")) {
+                    point1 = new  DataPoint(2, 40);
+                } else if (res.equals("9")) {
+                    point1 = new  DataPoint(2, 50);
+                } else if (res.equals("10")) {
+                    point1 = new  DataPoint(2, 60);
+                } else if (res.equals("11")) {
+                    point1 = new  DataPoint(2, 70);
+                } else {
+                    point1 = new  DataPoint(2, 80);
+                }
+                openFourthQuestionActivity(point1);
             }
         });
     }
 
-    public void openFourthQuestionActivity() {
-        Model.points[2] = point1;
+    public void openFourthQuestionActivity(DataPoint point1) {
+        HearModel.points[2] = point1;
         Intent thirdQuestionIntent = new Intent(this, FourthQuestionActivity.class);
         startActivity(thirdQuestionIntent);
 

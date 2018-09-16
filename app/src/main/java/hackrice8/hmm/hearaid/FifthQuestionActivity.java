@@ -20,7 +20,7 @@ public class FifthQuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fifth_question);
 
         //Buttons
-        final Model model = new Model();
+        final btnMapping btnMapping = new btnMapping();
         final Button btnSubmit = (Button) findViewById(R.id.btnTo6);
         final Button btne1 = (Button) findViewById(R.id.btne1);
         final Button btne2 = (Button) findViewById(R.id.btne2);
@@ -35,7 +35,7 @@ public class FifthQuestionActivity extends AppCompatActivity {
         final Button btne11 = (Button) findViewById(R.id.btne11);
         final Button btne12 = (Button) findViewById(R.id.btne12);
 
-        Map<Button, Integer> buttonsE = new HashMap<Button, Integer>(){{
+        final Map<Button, Integer> buttonsE = new HashMap<Button, Integer>(){{
             put(btne1, R.raw.hearingteste1);
             put(btne2, R.raw.hearingteste2);
             put(btne3, R.raw.hearingteste3);
@@ -52,45 +52,47 @@ public class FifthQuestionActivity extends AppCompatActivity {
         }};
 
         //Noise onclick
-        String res = model.buttonUI(this, buttonsE);
-        if(res.equals("1")) {
-            point1 = new DataPoint(4, -5);
-        } else if (res.equals("2")) {
-            point1 = new DataPoint(4, 0);
-        } else if (res.equals("3")) {
-            point1 = new  DataPoint(4, 5);
-        } else if (res.equals("4")) {
-            point1 = new  DataPoint(4, 10);
-        } else if (res.equals("5")) {
-            point1 = new  DataPoint(4, 15);
-        } else if (res.equals("6")) {
-            point1 = new  DataPoint(4, 20);
-        } else if (res.equals("7")) {
-            point1 = new  DataPoint(4, 30);
-        } else if (res.equals("8")) {
-            point1 = new  DataPoint(4, 40);
-        } else if (res.equals("9")) {
-            point1 = new  DataPoint(4, 50);
-        } else if (res.equals("10")) {
-            point1 = new  DataPoint(4, 60);
-        } else if (res.equals("11")) {
-            point1 = new  DataPoint(4, 70);
-        } else {
-            point1 = new  DataPoint(4, 80);
-        }
+        btnMapping.buttonUI(this, buttonsE);
+
 
         //Submit button
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openSixthQuestionActivity();
+                String res = btnMapping.findActiveButton(FifthQuestionActivity.super.getApplicationContext(), buttonsE);
+                if(res.equals("1")) {
+                    point1 = new DataPoint(4, -5);
+                } else if (res.equals("2")) {
+                    point1 = new DataPoint(4, 0);
+                } else if (res.equals("3")) {
+                    point1 = new  DataPoint(4, 5);
+                } else if (res.equals("4")) {
+                    point1 = new  DataPoint(4, 10);
+                } else if (res.equals("5")) {
+                    point1 = new  DataPoint(4, 15);
+                } else if (res.equals("6")) {
+                    point1 = new  DataPoint(4, 20);
+                } else if (res.equals("7")) {
+                    point1 = new  DataPoint(4, 30);
+                } else if (res.equals("8")) {
+                    point1 = new  DataPoint(4, 40);
+                } else if (res.equals("9")) {
+                    point1 = new  DataPoint(4, 50);
+                } else if (res.equals("10")) {
+                    point1 = new  DataPoint(4, 60);
+                } else if (res.equals("11")) {
+                    point1 = new  DataPoint(4, 70);
+                } else {
+                    point1 = new  DataPoint(4, 80);
+                }
+                openSixthQuestionActivity(point1);
             }
         });
 
     }
 
-    public void openSixthQuestionActivity() {
-        Model.points[4] = point1;
+    public void openSixthQuestionActivity(DataPoint point1) {
+        HearModel.points[4] = point1;
         Intent fifthQuestionIntent = new Intent(this, SixthQuestionActivity.class);
         startActivity(fifthQuestionIntent);
 
