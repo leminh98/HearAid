@@ -31,6 +31,7 @@
         <activity android:name=".CalibrationActivity" />
         <activity android:name=".RandomLetterActivity" />
         <activity android:name=".EyeResultActivity"></activity>
+        <activity android:name=".PreEyeTestActivity"></activity>
     </application>
 
 </manifest>

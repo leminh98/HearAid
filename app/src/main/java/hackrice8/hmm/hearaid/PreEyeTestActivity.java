@@ -13,7 +13,7 @@ public class PreEyeTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pre_eye_test);
 
-        final Button btnNxt = (Button) findViewById(R.id.buttonNext);
+        final Button btnNxt = (Button) findViewById(R.id.btnToEye);
         btnNxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

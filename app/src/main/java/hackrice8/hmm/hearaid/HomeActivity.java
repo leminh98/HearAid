@@ -50,7 +50,7 @@ public class HomeActivity extends AppCompatActivity {
 
     public void openRandomLetterActivity() {
 
-        Intent firstQuestionIntent = new Intent(this, RandomLetterActivity.class);
+        Intent firstQuestionIntent = new Intent(this, PreEyeTestActivity.class);
         startActivity(firstQuestionIntent);
 
     }
