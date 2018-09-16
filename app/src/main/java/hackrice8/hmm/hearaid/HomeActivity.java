@@ -31,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void openCalibrateActivity() {
-        Intent firstQuestionIntent = new Intent(this, CalibrationActivity.class);
+        Intent firstQuestionIntent = new Intent(this, RandomLetterActivity.class);
         startActivity(firstQuestionIntent);
 
     }
