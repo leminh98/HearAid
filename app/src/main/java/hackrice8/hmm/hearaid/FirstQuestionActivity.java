@@ -49,10 +49,6 @@ public class FirstQuestionActivity extends AppCompatActivity {
         }};
 
 
-//        Button[] buttonsA = new Button[] {btna1, btna2, btna3, btna4,
-//                                            btna5, btna6, btna7, btna8,
-//                                                btna9, btna10, btna11, btna12};
-
         //Noise onclick
         model.buttonUI(this, buttonsA);
 

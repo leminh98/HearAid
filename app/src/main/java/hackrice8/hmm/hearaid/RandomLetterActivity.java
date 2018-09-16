@@ -1,5 +1,6 @@
 package hackrice8.hmm.hearaid;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -31,13 +32,29 @@ public class RandomLetterActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
         TextView tv = new TextView(this);
-        tv.setLayoutParams(new RelativeLayout.LayoutParams(new Random().nextInt(metrics.widthPixels),
-                new Random().nextInt(metrics.heightPixels)));
-        tv.setText("A");
+        tv.setLayoutParams(new RelativeLayout.LayoutParams(1200,670)//new Random().nextInt(metrics.widthPixels),
+                //new Random().nextInt(metrics.heightPixels))
+        );
+        tv.setText(getRandomLetter());
+        tv.setTextSize(new Random().nextInt(30) + 2);
         llayout.addView(tv);
+
+        final Button buttonNext = (Button) findViewById(R.id.buttonNext);
+        buttonNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMultipleChoicenActivity();
+            }
+        });
 
 //        txt.setText(randLetter);
 //        Relative.addView(txt);
 //        setContentView(Relative);
+    }
+
+    public void openMultipleChoicenActivity() {
+        Intent fifthQuestionIntent = new Intent(this, MultipleChoiceAnswerActivity.class);
+        startActivity(fifthQuestionIntent);
+
     }
 }
