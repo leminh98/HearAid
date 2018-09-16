@@ -6,11 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.jjoe64.graphview.series.DataPoint;
+
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class FirstQuestionActivity extends AppCompatActivity {
+
+    protected static DataPoint point1 = new DataPoint(0, -5);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +54,32 @@ public class FirstQuestionActivity extends AppCompatActivity {
 
 
         //Noise onclick
-        model.buttonUI(this, buttonsA);
+        String res = model.buttonUI(this, buttonsA);
+        if(res.equals("1")) {
+            point1 = new DataPoint(0, -5);
+        } else if (res.equals("2")) {
+            point1 = new DataPoint(0, 0);
+        } else if (res.equals("3")) {
+            point1 = new  DataPoint(0, 5);
+        } else if (res.equals("4")) {
+            point1 = new  DataPoint(0, 10);
+        } else if (res.equals("5")) {
+            point1 = new  DataPoint(0, 15);
+        } else if (res.equals("6")) {
+            point1 = new  DataPoint(0, 20);
+        } else if (res.equals("7")) {
+            point1 = new  DataPoint(0, 30);
+        } else if (res.equals("8")) {
+            point1 = new  DataPoint(0, 40);
+        } else if (res.equals("9")) {
+            point1 = new  DataPoint(0, 50);
+        } else if (res.equals("10")) {
+            point1 = new  DataPoint(0, 60);
+        } else if (res.equals("11")) {
+            point1 = new  DataPoint(0, 70);
+        } else {
+            point1 = new  DataPoint(0, 80);
+        }
 
         //Submit button
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +92,7 @@ public class FirstQuestionActivity extends AppCompatActivity {
     }
 
     public void openSecondQuestionActivity() {
+        Model.points[0] = point1;
         Intent firstQuestionIntent = new Intent(this, SecondQuestionActivity.class);
         startActivity(firstQuestionIntent);
 

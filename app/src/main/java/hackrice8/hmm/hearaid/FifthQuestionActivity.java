@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.jjoe64.graphview.series.DataPoint;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class FifthQuestionActivity extends AppCompatActivity {
 
+    protected static DataPoint point1 = new DataPoint(4, -5);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +52,32 @@ public class FifthQuestionActivity extends AppCompatActivity {
         }};
 
         //Noise onclick
-        model.buttonUI(this, buttonsE);
+        String res = model.buttonUI(this, buttonsE);
+        if(res.equals("1")) {
+            point1 = new DataPoint(4, -5);
+        } else if (res.equals("2")) {
+            point1 = new DataPoint(4, 0);
+        } else if (res.equals("3")) {
+            point1 = new  DataPoint(4, 5);
+        } else if (res.equals("4")) {
+            point1 = new  DataPoint(4, 10);
+        } else if (res.equals("5")) {
+            point1 = new  DataPoint(4, 15);
+        } else if (res.equals("6")) {
+            point1 = new  DataPoint(4, 20);
+        } else if (res.equals("7")) {
+            point1 = new  DataPoint(4, 30);
+        } else if (res.equals("8")) {
+            point1 = new  DataPoint(4, 40);
+        } else if (res.equals("9")) {
+            point1 = new  DataPoint(4, 50);
+        } else if (res.equals("10")) {
+            point1 = new  DataPoint(4, 60);
+        } else if (res.equals("11")) {
+            point1 = new  DataPoint(4, 70);
+        } else {
+            point1 = new  DataPoint(4, 80);
+        }
 
         //Submit button
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +90,7 @@ public class FifthQuestionActivity extends AppCompatActivity {
     }
 
     public void openSixthQuestionActivity() {
+        Model.points[4] = point1;
         Intent fifthQuestionIntent = new Intent(this, SixthQuestionActivity.class);
         startActivity(fifthQuestionIntent);
 

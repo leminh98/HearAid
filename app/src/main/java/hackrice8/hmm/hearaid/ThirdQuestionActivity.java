@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.jjoe64.graphview.series.DataPoint;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class ThirdQuestionActivity extends AppCompatActivity {
 
+    protected static DataPoint point1 = new DataPoint(2, -5);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +51,32 @@ public class ThirdQuestionActivity extends AppCompatActivity {
         }};
 
         //Noise onclick
-        model.buttonUI(this, buttonsC);
+        String res = model.buttonUI(this, buttonsC);
+        if(res.equals("1")) {
+            point1 = new DataPoint(2, -5);
+        } else if (res.equals("2")) {
+            point1 = new DataPoint(2, 0);
+        } else if (res.equals("3")) {
+            point1 = new  DataPoint(2, 5);
+        } else if (res.equals("4")) {
+            point1 = new  DataPoint(2, 10);
+        } else if (res.equals("5")) {
+            point1 = new  DataPoint(2, 15);
+        } else if (res.equals("6")) {
+            point1 = new  DataPoint(2, 20);
+        } else if (res.equals("7")) {
+            point1 = new  DataPoint(2, 30);
+        } else if (res.equals("8")) {
+            point1 = new  DataPoint(2, 40);
+        } else if (res.equals("9")) {
+            point1 = new  DataPoint(2, 50);
+        } else if (res.equals("10")) {
+            point1 = new  DataPoint(2, 60);
+        } else if (res.equals("11")) {
+            point1 = new  DataPoint(2, 70);
+        } else {
+            point1 = new  DataPoint(2, 80);
+        }
 
         //Submit button
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +88,7 @@ public class ThirdQuestionActivity extends AppCompatActivity {
     }
 
     public void openFourthQuestionActivity() {
+        Model.points[2] = point1;
         Intent thirdQuestionIntent = new Intent(this, FourthQuestionActivity.class);
         startActivity(thirdQuestionIntent);
 

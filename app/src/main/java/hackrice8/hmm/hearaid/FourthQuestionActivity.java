@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.jjoe64.graphview.series.DataPoint;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class FourthQuestionActivity extends AppCompatActivity {
 
+    protected static DataPoint point1 = new DataPoint(3, -5);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +52,32 @@ public class FourthQuestionActivity extends AppCompatActivity {
         }};
 
         //Noise onclick
-        model.buttonUI(this, buttonsD);
+        String res = model.buttonUI(this, buttonsD);
+        if(res.equals("1")) {
+            point1 = new DataPoint(3, -5);
+        } else if (res.equals("2")) {
+            point1 = new DataPoint(3, 0);
+        } else if (res.equals("3")) {
+            point1 = new  DataPoint(3, 5);
+        } else if (res.equals("4")) {
+            point1 = new  DataPoint(3, 10);
+        } else if (res.equals("5")) {
+            point1 = new  DataPoint(3, 15);
+        } else if (res.equals("6")) {
+            point1 = new  DataPoint(3, 20);
+        } else if (res.equals("7")) {
+            point1 = new  DataPoint(3, 30);
+        } else if (res.equals("8")) {
+            point1 = new  DataPoint(3, 40);
+        } else if (res.equals("9")) {
+            point1 = new  DataPoint(3, 50);
+        } else if (res.equals("10")) {
+            point1 = new  DataPoint(3, 60);
+        } else if (res.equals("11")) {
+            point1 = new  DataPoint(3, 70);
+        } else {
+            point1 = new  DataPoint(3, 80);
+        }
 
         //Submit button
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +89,7 @@ public class FourthQuestionActivity extends AppCompatActivity {
     }
 
     public void openFifthQuestionActivity() {
+        Model.points[3] = point1;
         Intent fourthQuestionIntent = new Intent(this, FifthQuestionActivity.class);
         startActivity(fourthQuestionIntent);
 

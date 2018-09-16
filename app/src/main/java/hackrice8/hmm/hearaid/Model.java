@@ -10,18 +10,25 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import com.jjoe64.graphview.series.DataPoint;
+
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.function.Function;
 
 public class Model {
 
-    protected void buttonUI (final Context context, final Map<Button,Integer> audios){
+    protected static DataPoint[] points = new DataPoint[6];
+
+    protected String buttonUI (final Context context, final Map<Button,Integer> audios){
         //Color and sound onclick
         final int offColor = R.color.cardview_dark_background;
         final int onColor = R.color.colorAccent;
 
+        String retval = "";
         //Modify color of buttons in a column on click
         for (final Button btn : audios.keySet()) {
+            retval = (String) btn.getText();
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -40,6 +47,7 @@ public class Model {
                 }
             });
         }
+        return retval;
     }
 
 

@@ -14,13 +14,8 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         GraphView graph = (GraphView) findViewById(R.id.result);
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
-                new DataPoint(0, 1),
-                new DataPoint(1, 5),
-                new DataPoint(2, 3),
-                new DataPoint(3, 2),
-                new DataPoint(4, 6)
-        });
+        System.out.println(Model.points);
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(Model.points);
         graph.addSeries(series);
     }
 }

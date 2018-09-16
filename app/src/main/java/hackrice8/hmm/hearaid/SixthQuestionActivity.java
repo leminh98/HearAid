@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.jjoe64.graphview.series.DataPoint;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +15,7 @@ import javax.xml.transform.Result;
 
 public class SixthQuestionActivity extends AppCompatActivity {
 
+    protected static DataPoint point1 = new DataPoint(5, -5);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +53,32 @@ public class SixthQuestionActivity extends AppCompatActivity {
 
         }};
         //Noise onclick
-        model.buttonUI(this, buttonsF);
+        String res = model.buttonUI(this, buttonsF);
+        if(res.equals("1")) {
+            point1 = new DataPoint(5, -5);
+        } else if (res.equals("2")) {
+            point1 = new DataPoint(5, 0);
+        } else if (res.equals("3")) {
+            point1 = new  DataPoint(5, 5);
+        } else if (res.equals("4")) {
+            point1 = new  DataPoint(5, 10);
+        } else if (res.equals("5")) {
+            point1 = new  DataPoint(5, 15);
+        } else if (res.equals("6")) {
+            point1 = new  DataPoint(5, 20);
+        } else if (res.equals("7")) {
+            point1 = new  DataPoint(5, 30);
+        } else if (res.equals("8")) {
+            point1 = new  DataPoint(5, 40);
+        } else if (res.equals("9")) {
+            point1 = new  DataPoint(5, 50);
+        } else if (res.equals("10")) {
+            point1 = new  DataPoint(5, 60);
+        } else if (res.equals("11")) {
+            point1 = new  DataPoint(5, 70);
+        } else {
+            point1 = new  DataPoint(5, 80);
+        }
 
         //Submit button
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +90,7 @@ public class SixthQuestionActivity extends AppCompatActivity {
 
     }
     public void openResultQuestionActivity() {
+        Model.points[5] = point1;
         Intent sixthQuestionIntent = new Intent(this, ResultActivity.class);
         startActivity(sixthQuestionIntent);
 
