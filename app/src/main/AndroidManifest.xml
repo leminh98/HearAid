@@ -26,7 +26,8 @@
         <activity android:name=".FourthQuestionActivity" />
         <activity android:name=".FifthQuestionActivity" />
         <activity android:name=".SixthQuestionActivity" />
-        <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".CalibrationActivity"></activity>
     </application>
 
 </manifest>
