@@ -9,38 +9,67 @@
     <TableLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <TableRow
+            android:id="@+id/row1"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/instruction"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ems="10"
-                android:text="Choose the file where you can't here" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/instruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:ems="10"
+                    android:padding="4dp"
+                    android:text="INSTRUCTION"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/background_light" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:padding="4dp"
+                    android:text="Slowly go from 1 to 12 and choose the first one you can hear"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_light"
+                    tools:background="@color/colorPrimary" />
+
+            </LinearLayout>
+
         </TableRow>
 
         <TableRow
+            android:id="@+id/row2"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtAlmostSilent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:text="Almost Silent"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -51,26 +80,39 @@
                     android:id="@+id/btna1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Button" />
+                    android:layout_margin="1dp"
+                    android:background="@color/cardview_dark_background"
+                    android:text="1"
+                    android:textColor="@android:color/background_light" />
 
                 <Button
                     android:id="@+id/btna2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Button" />
+                    android:layout_margin="1dp"
+                    android:background="@color/cardview_dark_background"
+                    android:text="2"
+                    android:textColor="@android:color/background_light" />
             </LinearLayout>
 
         </TableRow>
 
         <TableRow
+            android:id="@+id/row3"
+            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_orange_light">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/txtQuiet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:text="Quiet"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/background_light" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -87,14 +129,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:background="@color/cardview_dark_background"
+                        android:text="3"
+                        android:layout_margin="1dp"
+                        android:textColor="@android:color/background_light" />
 
                     <Button
                         android:id="@+id/btna4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:background="@color/cardview_dark_background"
+                        android:text="4"
+                        android:layout_margin="1dp"
+                        android:textColor="@android:color/background_light" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -107,14 +155,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:background="@color/cardview_dark_background"
+                        android:text="5"
+                        android:layout_margin="1dp"
+                        android:textColor="@android:color/background_light" />
 
                     <Button
                         android:id="@+id/btna6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:background="@color/cardview_dark_background"
+                        android:text="6"
+                        android:layout_margin="1dp"
+                        android:textColor="@android:color/background_light" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -122,14 +176,19 @@
         </TableRow>
 
         <TableRow
+            android:id="@+id/row4"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/txtLoud"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:text="Loud"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -146,14 +205,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:layout_margin="1dp"
+                        android:background="@color/cardview_dark_background"
+                        android:textColor="@android:color/background_light"
+                        android:text="7" />
 
                     <Button
                         android:id="@+id/btna8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:layout_margin="1dp"
+                        android:background="@color/cardview_dark_background"
+                        android:textColor="@android:color/background_light"
+                        android:text="8" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -166,14 +231,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:layout_margin="1dp"
+                        android:background="@color/cardview_dark_background"
+                        android:textColor="@android:color/background_light"
+                        android:text="9" />
 
                     <Button
                         android:id="@+id/btna10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:layout_margin="1dp"
+                        android:background="@color/cardview_dark_background"
+                        android:textColor="@android:color/background_light"
+                        android:text="10" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -181,14 +252,21 @@
         </TableRow>
 
         <TableRow
+            android:id="@+id/row5"
+            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_orange_light">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtVeryLoud"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:text="Very Loud"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/background_light" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -199,18 +277,25 @@
                     android:id="@+id/btna11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Button" />
+                    android:layout_margin="1dp"
+                    android:background="@color/cardview_dark_background"
+                    android:textColor="@android:color/background_light"
+                    android:text="11" />
 
                 <Button
                     android:id="@+id/btna12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Button" />
+                    android:layout_margin="1dp"
+                    android:background="@color/cardview_dark_background"
+                    android:textColor="@android:color/background_light"
+                    android:text="12" />
             </LinearLayout>
 
         </TableRow>
 
         <TableRow
+            android:id="@+id/row6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
@@ -218,8 +303,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btnTo2"
