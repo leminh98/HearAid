@@ -5,8 +5,8 @@ package hackrice8.hmm.hearaid;
  */
 
 public class EyeModel {
-    protected int score;
-    protected int turn;
+    protected static int score;
+    protected static int turn;
 
     public int getScore() {
         return score;
@@ -24,7 +24,7 @@ public class EyeModel {
         this.correctCharAnswer = correctCharAnswer;
     }
 
-    protected String correctCharAnswer = "";
+    protected static String correctCharAnswer = "";
 
 
     public EyeModel() {

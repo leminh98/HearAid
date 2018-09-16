@@ -48,6 +48,11 @@ public class MultipleChoiceAnswerActivity extends AppCompatActivity {
 
     protected void setRandomAnswer(){
         correct_answer = (int) Math.floor(Math.random() * 4) ;
+        switch (correct_answer) {
+            case 0:
+                btn1.setText(EyeModel.correctCharAnswer);
+//                btn2.setText();
+        }
     }
 
     protected void evaluateAndMoveOn(Button btn) {
