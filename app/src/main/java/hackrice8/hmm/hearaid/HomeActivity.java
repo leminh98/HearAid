@@ -45,7 +45,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void openRandomLetterActivity() {
-        Intent firstQuestionIntent = new Intent(this, RandomLetterActivity.class);
+        EyeModel eyeModel = new EyeModel();
+        Intent firstQuestionIntent = new Intent(this, MultipleChoiceAnswerActivity.class);
         startActivity(firstQuestionIntent);
 
     }
