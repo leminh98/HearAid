@@ -6,6 +6,7 @@ package hackrice8.hmm.hearaid;
 
 public class EyeModel {
     protected int score;
+    protected int turn;
 
     public int getScore() {
         return score;
@@ -24,9 +25,10 @@ public class EyeModel {
     }
 
     protected String correctCharAnswer = "";
-    
 
-    public EyeModel(int score) {
-        this.score = score;
+
+    public EyeModel() {
+        this.score = 0;
+        this.turn = 0;
     }
 }
