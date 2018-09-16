@@ -10,26 +10,27 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import java.util.Map;
 import java.util.function.Function;
 
 public class Model {
 
-    protected void buttonUI (final Context context, final Button[] buttonsColumn){
+    protected void buttonUI (final Context context, final Map<Button,Integer> audios){
         //Color and sound onclick
         final int offColor = R.color.cardview_dark_background;
         final int onColor = R.color.colorAccent;
 
         //Modify color of buttons in a column on click
-        for (final Button btn : buttonsColumn) {
+        for (final Button btn : audios.keySet()) {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     //Play audio and turn on color
                     btn.setBackgroundColor(ContextCompat.getColor(context, onColor));
-                    MediaPlayer mp = MediaPlayer.create(btn.getContext(), R.raw.hearingtestcalibrated);
+                    MediaPlayer mp = MediaPlayer.create(btn.getContext(), audios.get(btn));
                     mp.start();
                     //Change color of other buttons to off
-                    for (Button other : buttonsColumn) {
+                    for (Button other : audios.keySet()) {
                         if (other != btn) {
                             other.setBackgroundColor(ContextCompat.getColor(context, offColor));
                         }

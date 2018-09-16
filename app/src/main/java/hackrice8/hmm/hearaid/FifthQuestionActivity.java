@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class FifthQuestionActivity extends AppCompatActivity {
 
     @Override
@@ -29,9 +32,21 @@ public class FifthQuestionActivity extends AppCompatActivity {
         final Button btne11 = (Button) findViewById(R.id.btne11);
         final Button btne12 = (Button) findViewById(R.id.btne12);
 
-        Button[] buttonsE = new Button[] {btne1, btne2, btne3, btne4,
-                btne5, btne6, btne7, btne8,
-                btne9, btne10, btne11, btne12};
+        Map<Button, Integer> buttonsE = new HashMap<Button, Integer>(){{
+            put(btne1, R.raw.hearingteste1);
+            put(btne2, R.raw.hearingteste2);
+            put(btne3, R.raw.hearingteste3);
+            put(btne4, R.raw.hearingteste4);
+            put(btne5, R.raw.hearingteste5);
+            put(btne6, R.raw.hearingteste6);
+            put(btne7, R.raw.hearingteste7);
+            put(btne8, R.raw.hearingteste8);
+            put(btne9, R.raw.hearingteste9);
+            put(btne10, R.raw.hearingteste10);
+            put(btne11, R.raw.hearingteste11);
+            put(btne12, R.raw.hearingteste12);
+
+        }};
 
         //Noise onclick
         model.buttonUI(this, buttonsE);
