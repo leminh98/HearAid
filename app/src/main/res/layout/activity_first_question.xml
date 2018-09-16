@@ -48,13 +48,13 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/btna1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Button" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/btna2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Button" />
@@ -83,14 +83,14 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button2"
+                        android:id="@+id/btna3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Button" />
 
                     <Button
-                        android:id="@+id/button4"
+                        android:id="@+id/btna4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -103,14 +103,14 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button3"
+                        android:id="@+id/btna5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Button" />
 
                     <Button
-                        android:id="@+id/button"
+                        android:id="@+id/btna6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -142,14 +142,14 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button2"
+                        android:id="@+id/btna7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Button" />
 
                     <Button
-                        android:id="@+id/button4"
+                        android:id="@+id/btna8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -162,14 +162,14 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button3"
+                        android:id="@+id/btna9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Button" />
 
                     <Button
-                        android:id="@+id/button"
+                        android:id="@+id/btna10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -196,13 +196,13 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/btna11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Button" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/btna12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Button" />
