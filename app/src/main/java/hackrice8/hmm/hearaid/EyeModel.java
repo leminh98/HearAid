@@ -27,7 +27,7 @@ public class EyeModel {
         ArrayList<String> chars = new ArrayList<String>(Arrays.asList("A","B","C","D","E","F","G","H","I","J","K","L","M","N",
                 "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"));
         chars.remove(exception.toUpperCase());
-        return chars.get((int) (Math.random() + 24));
+        return chars.get((int) (Math.random() * 24));
     }
 
 

@@ -7,10 +7,10 @@ import android.view.View;
 import android.widget.Button;
 
 public class MultipleChoiceAnswerActivity extends AppCompatActivity {
-    Button btn1 ;
-    Button btn2 ;
-    Button btn3 ;
-    Button btn4 ;
+//    Button btn1 ;
+//    Button btn2 ;
+//    Button btn3 ;
+//    Button btn4 ;
     int correct_answer = 0;
 
     @Override
@@ -20,13 +20,13 @@ public class MultipleChoiceAnswerActivity extends AppCompatActivity {
 
 
 
-        btn1 = (Button) findViewById(R.id.btn1stChoice);
-        btn2 = (Button) findViewById(R.id.btn2ndChoice);
-        btn3 = (Button) findViewById(R.id.btn3rdChoice);
-        btn4 = (Button) findViewById(R.id.btn4thChoice);
+        final Button btn1 = (Button) findViewById(R.id.btn1stChoice);
+        final Button btn2 = (Button) findViewById(R.id.btn2ndChoice);
+        final Button btn3 = (Button) findViewById(R.id.btn3rdChoice);
+        final Button btn4 = (Button) findViewById(R.id.btn4thChoice);
 
         //        Set the answer to a random button
-        setRandomAnswer();
+        setRandomAnswer(btn1, btn2, btn3, btn4);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +53,7 @@ public class MultipleChoiceAnswerActivity extends AppCompatActivity {
         });
     }
 
-    protected void setRandomAnswer(){
+    protected void setRandomAnswer(Button btn1,Button btn2, Button btn3,Button btn4){
         correct_answer = (int) Math.floor(Math.random() * 4) ;
         switch (correct_answer) {
             case 0:
@@ -89,8 +89,8 @@ public class MultipleChoiceAnswerActivity extends AppCompatActivity {
         }
         EyeModel.turn +=1;
         Intent intent;
-        if (EyeModel.turn == 4) {
-            intent = new Intent(this, ResultActivity.class);
+        if (EyeModel.turn == 10) {
+            intent = new Intent(this, EyeResultActivity.class);
 
         } else {
             intent = new Intent(this, RandomLetterActivity.class);

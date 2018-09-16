@@ -27,8 +27,10 @@
         <activity android:name=".FifthQuestionActivity" />
         <activity android:name=".SixthQuestionActivity" />
         <activity android:name=".ResultActivity" />
+        <activity android:name=".MultipleChoiceAnswerActivity" />
         <activity android:name=".CalibrationActivity" />
-        <activity android:name=".RandomLetterActivity"></activity>
+        <activity android:name=".RandomLetterActivity" />
+        <activity android:name=".EyeResultActivity"></activity>
     </application>
 
 </manifest>

@@ -20,6 +20,8 @@ public class HomeActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        final EyeModel eyeModel = new EyeModel();
+
         final Button btnStartHearing = (Button) findViewById(R.id.btnStart);
         btnStartHearing.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +38,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+
+
     }
 
     public void openCalibrateActivity() {
@@ -45,7 +49,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void openRandomLetterActivity() {
-        EyeModel eyeModel = new EyeModel();
+
         Intent firstQuestionIntent = new Intent(this, RandomLetterActivity.class);
         startActivity(firstQuestionIntent);
 

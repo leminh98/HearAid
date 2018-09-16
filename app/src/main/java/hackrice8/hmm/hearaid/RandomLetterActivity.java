@@ -36,6 +36,7 @@ public class RandomLetterActivity extends AppCompatActivity {
                 //new Random().nextInt(metrics.heightPixels))
         );
         tv.setText(getRandomLetter());
+        EyeModel.correctCharAnswer = (String) tv.getText();
         tv.setTextSize(new Random().nextInt(30) + 2);
         llayout.addView(tv);
 
