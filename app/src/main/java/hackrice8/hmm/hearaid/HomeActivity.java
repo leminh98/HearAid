@@ -24,14 +24,14 @@ public class HomeActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openFirstQuestionActivity();
+                openCalibrateActivity();
             }
         });
 
     }
 
-    public void openFirstQuestionActivity() {
-        Intent firstQuestionIntent = new Intent(this, FirstQuestionActivity.class);
+    public void openCalibrateActivity() {
+        Intent firstQuestionIntent = new Intent(this, CalibrationActivity.class);
         startActivity(firstQuestionIntent);
 
     }
