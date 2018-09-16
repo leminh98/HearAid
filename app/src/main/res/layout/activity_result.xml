@@ -4,6 +4,560 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/scoringbackground"
+    android:visibility="visible"
     tools:context="hackrice8.hmm.hearaid.ResultActivity">
+
+    <TableLayout
+        android:id="@+id/buttongrid"
+        android:layout_width="303dp"
+        android:layout_height="476dp"
+        android:layout_column="1"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_row="12"
+        android:orientation="horizontal"
+        android:showDividers="middle|end"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TableRow
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="134dp">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/xicon"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="135dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/xicon"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="135dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/xicon"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="135dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/xicon"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="135dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/xicon"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="135dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/xicon"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="135dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/xicon"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="135dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/xicon"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="135dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/xicon"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="135dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/xicon"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="135dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/xicon"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="135dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="295dp">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/xicon" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/xicon"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="135dp" />
+
+        </TableRow>
+
+    </TableLayout>
 
 </android.support.constraint.ConstraintLayout>
