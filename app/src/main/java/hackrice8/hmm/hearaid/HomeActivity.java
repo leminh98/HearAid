@@ -20,17 +20,31 @@ public class HomeActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final Button btnStart = (Button) findViewById(R.id.btnStart);
-        btnStart.setOnClickListener(new View.OnClickListener() {
+        final Button btnStartHearing = (Button) findViewById(R.id.btnStart);
+        btnStartHearing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openCalibrateActivity();
             }
         });
 
+        final Button btnStartVision = (Button) findViewById(R.id.btnEyeTest);
+        btnStartVision.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openRandomLetterActivity();
+            }
+        });
+
     }
 
     public void openCalibrateActivity() {
+        Intent firstQuestionIntent = new Intent(this, CalibrationActivity.class);
+        startActivity(firstQuestionIntent);
+
+    }
+
+    public void openRandomLetterActivity() {
         Intent firstQuestionIntent = new Intent(this, RandomLetterActivity.class);
         startActivity(firstQuestionIntent);
 
